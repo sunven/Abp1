@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
+using System.Web;
 using Microsoft.Owin;
-//using Microsoft.Owin.Host.HttpListener;
 using Owin;
 
 namespace OwinDemo
@@ -9,7 +9,11 @@ namespace OwinDemo
     {
         public void Configuration(IAppBuilder appBuilder)
         {
-            appBuilder.Run(HandleRequest);
+            appBuilder.UseWebApi(ApiGlobalConfiguration.Configuration);
+            appBuilder.Use((cxt, next) =>
+            {
+                return next.Invoke();
+            });
         }
 
         static Task HandleRequest(IOwinContext context)

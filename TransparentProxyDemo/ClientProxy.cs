@@ -73,7 +73,6 @@ namespace TransparentProxyDemo
                 if (_unProxyMethods.All(item => item != methodInfo.Name))
                 {
                     objReturnValue = methodInfo.Name + "abc";
-                    //objReturnValue = _actionInvoker.Invoke(_proxyType, methodInfo, methodMessage.Args);
                 }
             }
             return new ReturnMessage(objReturnValue, methodMessage.Args, methodMessage.ArgCount,
