@@ -2,10 +2,10 @@ using System.Net.Http;
 using System.Reflection;
 using System.Web.Http.Filters;
 
-namespace OwinDemo
+namespace OwinDemo.DynamicApi
 {
     /// <summary>
-    ///     Used to store an action information of a dynamic ApiController.
+    /// 用来存储动态ApiController的action.
     /// </summary>
     internal class DynamicApiActionInfo
     {

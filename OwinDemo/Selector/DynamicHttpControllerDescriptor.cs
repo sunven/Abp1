@@ -4,10 +4,10 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
-namespace OwinDemo
+namespace OwinDemo.Selector
 {
     /// <summary>
-    ///     This class is used to extend the default controller descriptor to add the action filters dynamically.
+    /// 这个类用于扩展默认的控制器描述符以动态添加操作筛选器
     /// </summary>
     public class DynamicHttpControllerDescriptor : HttpControllerDescriptor
     {
@@ -32,7 +32,7 @@ namespace OwinDemo
         }
 
         /// <summary>
-        ///     The overrides the GetFilters for the controller and adds the Dynamic Controller filters.
+        /// 重写过滤方法
         /// </summary>
         /// <returns> The Collection of filters.</returns>
         public override Collection<IFilter> GetFilters()

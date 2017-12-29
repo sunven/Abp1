@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Web.Http.Filters;
 
-namespace OwinDemo
+namespace OwinDemo.DynamicApi
 {
     /// <summary>
-    ///     Used to store a controller information.
+    /// 用来存储动态ApiController的Controller
     /// </summary>
     internal class DynamicApiControllerInfo
     {

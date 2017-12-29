@@ -1,15 +1,16 @@
 using System;
 using System.Web.Http.Controllers;
+using OwinDemo.DynamicApi;
 
-namespace OwinDemo
+namespace OwinDemo.Selector
 {
     /// <summary>
-    ///     This class overrides ApiControllerActionSelector to select actions of dynamic ApiControllers.
+    /// 这类重写apicontrolleractionselector选择动态apicontroller的action
     /// </summary>
     public class AbpApiControllerActionSelector : ApiControllerActionSelector
     {
         /// <summary>
-        ///     This class is called by Web API system to select action method from given controller.
+        /// 该类由web API系统调用，从给定控制器中选择action方法
         /// </summary>
         /// <param name="controllerContext">Controller context</param>
         /// <returns>Action to be used</returns>
@@ -20,23 +21,22 @@ namespace OwinDemo
             {
                 return base.SelectAction(controllerContext);
             }
-            //Get controller information which is selected by AbpHttpControllerSelector.
             if (!(controllerInfoObj is DynamicApiControllerInfo controllerInfo))
             {
                 throw new Exception();
             }
 
-            //Get action name
+            //获取action
             var actionName = controllerContext.RouteData.Values["action"] as string;
             if (string.IsNullOrEmpty(actionName))
             {
                 return base.SelectAction(controllerContext);
             }
-            //Get action information
             if (!controllerInfo.Actions.ContainsKey(actionName))
             {
                 throw new Exception();
             }
+            //返回DyanamicHttpActionDescriptor 其中有action的具体操作
             return new DyanamicHttpActionDescriptor(controllerContext.ControllerDescriptor,
                 controllerInfo.Actions[actionName].Method, controllerInfo.Actions[actionName].Filters, controllerInfo.Actions[actionName].Verb);
         }

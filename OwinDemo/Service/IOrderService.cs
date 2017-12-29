@@ -1,4 +1,4 @@
-﻿namespace OwinDemo
+﻿namespace OwinDemo.Service
 {
     public interface IOrderService
     {

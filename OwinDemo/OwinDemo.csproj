@@ -71,21 +71,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbpApiControllerActionSelector.cs" />
-    <Compile Include="AbpControllerActivator.cs" />
-    <Compile Include="AbpHttpControllerSelector.cs" />
+    <Compile Include="Selector\AbpApiControllerActionSelector.cs" />
+    <Compile Include="Selector\AbpControllerActivator.cs" />
+    <Compile Include="Selector\AbpHttpControllerSelector.cs" />
     <Compile Include="ApiGlobalConfiguration.cs" />
-    <Compile Include="DyanamicHttpActionDescriptor.cs" />
-    <Compile Include="DynamicApiActionInfo.cs" />
-    <Compile Include="DynamicApiController.cs" />
-    <Compile Include="DynamicApiControllerActionHelper.cs" />
-    <Compile Include="DynamicApiControllerInfo.cs" />
-    <Compile Include="DynamicApiControllerManager.cs" />
-    <Compile Include="DynamicHttpControllerDescriptor.cs" />
+    <Compile Include="Selector\DyanamicHttpActionDescriptor.cs" />
+    <Compile Include="DynamicApi\DynamicApiActionInfo.cs" />
+    <Compile Include="DynamicApi\DynamicApiController.cs" />
+    <Compile Include="DynamicApi\DynamicApiControllerActionHelper.cs" />
+    <Compile Include="DynamicApi\DynamicApiControllerInfo.cs" />
+    <Compile Include="DynamicApi\DynamicApiControllerManager.cs" />
+    <Compile Include="Selector\DynamicHttpControllerDescriptor.cs" />
     <Compile Include="EntityExtensions.cs" />
-    <Compile Include="IDynamicApiController.cs" />
-    <Compile Include="IOrderService.cs" />
-    <Compile Include="OrderService.cs" />
+    <Compile Include="DynamicApi\IDynamicApiController.cs" />
+    <Compile Include="Service\IOrderService.cs" />
+    <Compile Include="Service\OrderService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

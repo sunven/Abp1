@@ -1,6 +1,6 @@
 using System.Web.Http.Controllers;
 
-namespace OwinDemo
+namespace OwinDemo.DynamicApi
 {
     /// <summary>
     ///     This interface is just used to mark dynamic web api controllers.

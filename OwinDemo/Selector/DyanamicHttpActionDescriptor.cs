@@ -7,8 +7,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
+using OwinDemo.DynamicApi;
 
-namespace OwinDemo
+namespace OwinDemo.Selector
 {
     public class DyanamicHttpActionDescriptor : ReflectedHttpActionDescriptor
     {
@@ -26,6 +27,13 @@ namespace OwinDemo
             _filters = filters;
         }
 
+        /// <summary>
+        /// action的具体操作会到这里
+        /// </summary>
+        /// <param name="controllerContext"></param>
+        /// <param name="arguments"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public override Task<object> ExecuteAsync(HttpControllerContext controllerContext,
             IDictionary<string, object> arguments, CancellationToken cancellationToken)
         {
@@ -52,12 +60,14 @@ namespace OwinDemo
                 var actionexcutorType = typeof(ReflectedHttpActionDescriptor).GetNestedType("ActionExecutor",
                     BindingFlags.Instance | BindingFlags.NonPublic);
 
+                //得到Service具体的方法的实例
                 var actionExecutor = Activator.CreateInstance(actionexcutorType, MethodInfo);
 
                 if (!(controllerContext.Controller is IDynamicApiController dynamicController))
                 {
                     return base.ExecuteAsync(controllerContext, arguments, cancellationToken);
                 }
+                //执行这个方法
                 return actionExecutor.ExecuteMethod<Task<object>>("Execute", dynamicController.ProxyObject,
                     argumentValues);
             }

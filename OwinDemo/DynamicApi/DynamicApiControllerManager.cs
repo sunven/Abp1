@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace OwinDemo
+namespace OwinDemo.DynamicApi
 {
     /// <summary>
-    ///     This class is used to store dynamic controller information.
+    /// 所有动态ApiController信息缓在这儿
     /// </summary>
     internal static class DynamicApiControllerManager
     {

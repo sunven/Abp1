@@ -3,6 +3,9 @@ using System.Reflection;
 
 namespace OwinDemo
 {
+    /// <summary>
+    /// 帮助方法
+    /// </summary>
     public static class EntityExtensions
     {
         /// <summary>

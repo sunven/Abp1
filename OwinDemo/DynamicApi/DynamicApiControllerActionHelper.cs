@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace OwinDemo
+namespace OwinDemo.DynamicApi
 {
+    /// <summary>
+    /// 创建DynamicApiControllerAction的帮助类
+    /// </summary>
     internal static class DynamicApiControllerActionHelper
     {
         public static List<MethodInfo> GetMethodsOfType(Type type)

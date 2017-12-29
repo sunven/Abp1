@@ -4,7 +4,7 @@ using System.Web.Http;
 namespace OwinDemo
 {
     /// <summary>
-    /// 
+    /// 全局Configuration
     /// </summary>
     public static class ApiGlobalConfiguration
     {
