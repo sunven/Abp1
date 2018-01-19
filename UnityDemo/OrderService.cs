@@ -7,13 +7,20 @@ namespace UnityDemo
     {
         public string GetOrder()
         {
-            return "GetOrder123";
+            var a = 0;
+            for (var i = 0; i < 100000; i++)
+                for (var j = 0; j < 10000; j++)
+                    a = i - j;
+            return a + "";
         }
 
         public string GetOrderDetail()
         {
-            //Thread.Sleep(1000);
-            return "GetOrderDetail123";
+            var a = 0;
+            for (var i = 0; i < 100000; i++)
+                for (var j = 0; j < 10000; j++)
+                    a = i - j;
+            return a + "";
         }
     }
 }
