@@ -1,25 +1,11 @@
-2018-01-11 15:46:30耗时：0
-2018-01-11 15:47:06耗时：3863
-2018-01-11 15:47:18耗时：0
-2018-01-11 15:47:37耗时：3
-2018-01-11 15:48:10耗时：17
-2018-01-11 15:48:28耗时：4847
-2018-01-11 15:50:01耗时：16
-2018-01-11 15:50:13耗时：0
-2018-01-11 15:51:13耗时：42
-2018-01-11 15:51:23耗时：0
-2018-01-11 15:52:50耗时：43
-2018-01-11 15:52:57耗时：3
-2018-01-11 15:53:03耗时：3
-2018-01-11 15:53:26耗时：340
-2018-01-11 15:53:37耗时：293
-2018-01-11 15:53:42耗时：277
-2018-01-11 15:53:45耗时：282
-2018-01-11 15:53:59异常：System.FormatException: 输入字符串的格式不正确。
+2018-01-22 19:15:31耗时：339
+2018-01-22 19:15:41耗时：169
+2018-01-22 19:17:17耗时：329
+2018-01-22 19:17:26异常：System.FormatException: 输入字符串的格式不正确。
    在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
    在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
    在 System.Convert.ToInt32(String value)
-   在 AuditingDemo.Controllers.HomeController.About() 位置 C:\Users\孙文权\Documents\Visual Studio 2017\Projects\Abp1\AuditingDemo\Controllers\HomeController.cs:行号 27
+   在 AuditingMvcDemo.Controllers.HomeController.About() 位置 C:\Users\孙文权\Documents\Visual Studio 2017\Projects\Abp1\AuditingDemo\Controllers\HomeController.cs:行号 20
    在 lambda_method(Closure , ControllerBase , Object[] )
    在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
    在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)

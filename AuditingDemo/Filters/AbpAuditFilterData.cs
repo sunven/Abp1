@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Web;
 
-namespace AuditingDemo.Filters
+namespace AuditingMvcDemo.Filters
 {
     public class AbpAuditFilterData
     {

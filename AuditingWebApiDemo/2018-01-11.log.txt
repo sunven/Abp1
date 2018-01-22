@@ -1,4 +1,0 @@
-2018-01-11 19:12:43 ValuesController/Get/{}耗时：317
-2018-01-11 19:12:51 ValuesController/Get/{}耗时：275
-2018-01-11 19:12:59 ValuesController/Get/{"id":1}耗时：280
-2018-01-11 19:13:11 ValuesController/Get/{"id":1}耗时：298

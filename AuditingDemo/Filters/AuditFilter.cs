@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.IO;
 using System.Web.Mvc;
-using AuditingDemo.Filters;
 
 namespace AuditingMvcDemo.Filters
 {

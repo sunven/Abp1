@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+using System.Threading;
 using System.Web.Http;
 
 namespace AuditingWebApiDemo.Controllers
@@ -12,36 +10,21 @@ namespace AuditingWebApiDemo.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            var a = 0;
-            for (var i = 0; i < 10000; i++)
-                for (var j = 0; j < 10000; j++)
-                    a = i - j;
-            return new[] { a + "", };
+            Thread.Sleep(new Random().Next(500, 1000));
+            return new[] { "Get" };
         }
 
         // GET api/values/5
         public string Get(int id)
         {
-            var a = 0;
-            for (var i = 0; i < 10000; i++)
-                for (var j = 0; j < 10000; j++)
-                    a = i - j;
-            return a + "";
+            Thread.Sleep(new Random().Next(500, 1000));
+            return id + "";
         }
 
-        // POST api/values
-        public void Post([FromBody]string value)
+        [Route("api/values/GetError")]
+        public void GetError()
         {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
+            var a = Convert.ToInt32("a");
         }
     }
 }

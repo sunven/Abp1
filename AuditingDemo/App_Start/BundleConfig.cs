@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace AuditingDemo
+namespace AuditingMvcDemo
 {
     public class BundleConfig
     {
