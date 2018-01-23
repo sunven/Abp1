@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 
 namespace UnityDemo
 {
@@ -7,20 +8,14 @@ namespace UnityDemo
     {
         public string GetOrder()
         {
-            var a = 0;
-            for (var i = 0; i < 100000; i++)
-                for (var j = 0; j < 10000; j++)
-                    a = i - j;
-            return a + "";
+            Thread.Sleep(new Random().Next(500, 1000));
+            return "GetOrder";
         }
 
         public string GetOrderDetail()
         {
-            var a = 0;
-            for (var i = 0; i < 100000; i++)
-                for (var j = 0; j < 10000; j++)
-                    a = i - j;
-            return a + "";
+            var i = Convert.ToInt32("a");
+            return i + "GetOrder";
         }
     }
 }

@@ -22,6 +22,12 @@ namespace UnityDemo
             var s = new Stopwatch();
             s.Start();
             var result = getNext()(input, getNext);
+            if (result.Exception != null)
+            {
+                WriteLog(result.Exception.ToString());
+                //表示处理异常 Unity就不会抛出
+                result.Exception = null;
+            }
             s.Stop();
             WriteLog("方法：{0},参数：{1},耗时：{2}",
                 input.MethodBase.Name, JsonConvert.SerializeObject(input.Arguments), s.Elapsed.TotalMilliseconds);
