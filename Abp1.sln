@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinDemo", "OwinDemo\OwinDemo.csproj", "{616A1082-8E72-4028-8EDE-681E416E4C0F}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditingMvcDemo", "AuditingDemo\AuditingMvcDemo.csproj", "{D4224B28-88C0-4661-9B59-1844FA6E65CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditingWebApiDemo", "AuditingWebApiDemo\AuditingWebApiDemo.csproj", "{750E8A69-2AC2-460D-8FBD-51713C1ACB2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastDFSDemo", "FastDFSDemo\FastDFSDemo.csproj", "{7D315F88-5F49-4773-8D84-2818A5473DB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{750E8A69-2AC2-460D-8FBD-51713C1ACB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{750E8A69-2AC2-460D-8FBD-51713C1ACB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{750E8A69-2AC2-460D-8FBD-51713C1ACB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D315F88-5F49-4773-8D84-2818A5473DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D315F88-5F49-4773-8D84-2818A5473DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D315F88-5F49-4773-8D84-2818A5473DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D315F88-5F49-4773-8D84-2818A5473DB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
