@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Abp.Dependency;
 using Abp.Domain.Entities;
+using Abp.Domain.Uow;
+using Abp.MultiTenancy;
+using Abp.Reflection.Extensions;
 
 namespace Abp.Domain.Repositories
 {
@@ -16,20 +20,20 @@ namespace Abp.Domain.Repositories
         /// <summary>
         /// The multi tenancy side
         /// </summary>
-        //public static MultiTenancySides? MultiTenancySide { get; private set; }
+        public static MultiTenancySides? MultiTenancySide { get; private set; }
 
-        //public IUnitOfWorkManager UnitOfWorkManager { get; set; }
+        public IUnitOfWorkManager UnitOfWorkManager { get; set; }
 
-        //public IIocResolver IocResolver { get; set; }
+        public IIocResolver IocResolver { get; set; }
 
-        //static AbpRepositoryBase()
-        //{
-        //    var attr = typeof(TEntity).GetSingleAttributeOfTypeOrBaseTypesOrNull<MultiTenancySideAttribute>();
-        //    if (attr != null)
-        //    {
-        //        MultiTenancySide = attr.Side;
-        //    }
-        //}
+        static AbpRepositoryBase()
+        {
+            var attr = typeof(TEntity).GetSingleAttributeOfTypeOrBaseTypesOrNull<MultiTenancySideAttribute>();
+            if (attr != null)
+            {
+                MultiTenancySide = attr.Side;
+            }
+        }
 
         public abstract IQueryable<TEntity> GetAll();
 

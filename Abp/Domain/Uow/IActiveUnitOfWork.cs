@@ -12,27 +12,27 @@ namespace Abp.Domain.Uow
     public interface IActiveUnitOfWork
     {
         /// <summary>
-        /// This event is raised when this UOW is successfully completed.
+        /// 当这个UOW成功完成时，这个事件就会发生
         /// </summary>
         event EventHandler Completed;
 
         /// <summary>
-        /// This event is raised when this UOW is failed.
+        /// 此UOW失败时会引发此事件
         /// </summary>
         event EventHandler<UnitOfWorkFailedEventArgs> Failed;
 
         /// <summary>
-        /// This event is raised when this UOW is disposed.
+        /// 这个事件在这个UOW被销毁时执行。
         /// </summary>
         event EventHandler Disposed;
 
         /// <summary>
-        /// Gets if this unit of work is transactional.
+        /// 获取这个工作单元的事务设置。
         /// </summary>
         UnitOfWorkOptions Options { get; }
 
         /// <summary>
-        /// Gets data filter configurations for this unit of work.
+        /// 获取此工作单元的数据过滤器配置。
         /// </summary>
         IReadOnlyList<DataFilterConfiguration> Filters { get; }
 
@@ -42,11 +42,11 @@ namespace Abp.Domain.Uow
         bool IsDisposed { get; }
 
         /// <summary>
-        /// Saves all changes until now in this unit of work.
-        /// This method may be called to apply changes whenever needed.
-        /// Note that if this unit of work is transactional, saved changes are also rolled back if transaction is rolled back.
-        /// No explicit call is needed to SaveChanges generally, 
-        /// since all changes saved at end of a unit of work automatically.
+        /// 在此工作单元中保存所有更改。
+        /// 可以调用此方法以在需要时应用更改。
+        /// 请注意，如果此工作单元是事务性的，则如果事务回滚，则保存的更改也会回滚。
+        /// SaveChanges通常不需要显式调用，
+        /// 因为所有更改都会自动保存在工作单元末尾。
         /// </summary>
         void SaveChanges();
 
@@ -60,9 +60,9 @@ namespace Abp.Domain.Uow
         Task SaveChangesAsync();
 
         /// <summary>
-        /// Disables one or more data filters.
-        /// Does nothing for a filter if it's already disabled. 
-        /// Use this method in a using statement to re-enable filters if needed.
+        /// 禁用一个或多个数据过滤器。
+        /// 如果过滤器已禁用，则不执行任何操作。
+        /// 如果需要，在using语句中使用此方法重新启用筛选器。
         /// </summary>
         /// <param name="filterNames">One or more filter names. <see cref="AbpDataFilters"/> for standard filters.</param>
         /// <returns>A <see cref="IDisposable"/> handle to take back the disable effect.</returns>
@@ -84,7 +84,7 @@ namespace Abp.Domain.Uow
         bool IsFilterEnabled(string filterName);
 
         /// <summary>
-        /// Sets (overrides) value of a filter parameter.
+        /// 设置（覆盖）过滤器参数的值。
         /// </summary>
         /// <param name="filterName">Name of the filter</param>
         /// <param name="parameterName">Parameter's name</param>
@@ -92,14 +92,14 @@ namespace Abp.Domain.Uow
         IDisposable SetFilterParameter(string filterName, string parameterName, object value);
 
         /// <summary>
-        /// Sets/Changes Tenant's Id for this UOW.
+        /// 设置/更改此UOW的租户ID。
         /// </summary>
         /// <param name="tenantId">The tenant id.</param>
         /// <returns>A disposable object to restore old TenantId value when you dispose it</returns>
         IDisposable SetTenantId(int? tenantId);
 
         /// <summary>
-        /// Sets/Changes Tenant's Id for this UOW.
+        /// 设置/更改此UOW的租户ID。
         /// </summary>
         /// <param name="tenantId">The tenant id</param>
         /// <param name="switchMustHaveTenantEnableDisable">

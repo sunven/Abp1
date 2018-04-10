@@ -16,8 +16,8 @@ namespace Abp.Domain.Uow
         public TransactionScopeOption? Scope { get; set; }
 
         /// <summary>
-        /// Is this UOW transactional?
-        /// Uses default value if not supplied.
+        /// 这是UOW交易吗？
+        /// 如果未提供，则使用默认值。
         /// </summary>
         public bool? IsTransactional { get; set; }
 

@@ -59,11 +59,14 @@
   <ItemGroup>
     <Compile Include="AbpException.cs" />
     <Compile Include="Check.cs" />
+    <Compile Include="Collections\Extensions\CollectionExtensions.cs" />
     <Compile Include="Collections\Extensions\DictionaryExtensions.cs" />
     <Compile Include="Collections\ITypeList.cs" />
     <Compile Include="Collections\TypeList.cs" />
     <Compile Include="Configuration\Startup\IMultiTenancyConfig.cs" />
     <Compile Include="Configuration\Startup\MultiTenancyConfig.cs" />
+    <Compile Include="Data\ActiveTransactionProviderArgs.cs" />
+    <Compile Include="Data\IActiveTransactionProvider.cs" />
     <Compile Include="Dependency\IIocResolver.cs" />
     <Compile Include="Dependency\ISingletonDependency.cs" />
     <Compile Include="DisposeAction.cs" />
@@ -90,8 +93,10 @@
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="MultiTenancy\ITenantResolveContributor.cs" />
+    <Compile Include="MultiTenancy\MultiTenancySideAttribute.cs" />
     <Compile Include="MultiTenancy\MultiTenancySides.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\Extensions\MemberInfoExtensions.cs" />
     <Compile Include="Reflection\ReflectionHelper.cs" />
     <Compile Include="Runtime\IAmbientDataContext.cs" />
     <Compile Include="Runtime\IAmbientScopeProvider.cs" />

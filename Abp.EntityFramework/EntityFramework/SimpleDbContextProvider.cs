@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using Abp.MultiTenancy;
 
 namespace Abp.EntityFramework.EntityFramework
 {
@@ -17,6 +18,11 @@ namespace Abp.EntityFramework.EntityFramework
         }
 
         public TDbContext GetDbContext()
+        {
+            return DbContext;
+        }
+
+        public TDbContext GetDbContext(MultiTenancySides? multiTenancySide)
         {
             return DbContext;
         }
