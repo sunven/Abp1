@@ -9,10 +9,19 @@
             Discount = discount;
         }
 
+        /// <summary>
+        /// 数量
+        /// </summary>
         public int Quantity { get; }
 
+        /// <summary>
+        /// 单价
+        /// </summary>
         public decimal UnitPrice { get; }
 
+        /// <summary>
+        /// 折扣
+        /// </summary>
         public float Discount { get; }
 
         public decimal Total => Quantity * UnitPrice * (decimal) (1.0f - Discount);
