@@ -62,6 +62,7 @@
     <Compile Include="EntityFramework\Uow\EfUnitOfWork.cs" />
     <Compile Include="EntityFramework\Uow\IEfTransactionStrategy.cs" />
     <Compile Include="EntityFramework\Uow\IEfUnitOfWorkFilterExecuter.cs" />
+    <Compile Include="EntityFramework\Uow\UnitOfWorkExtensions.cs" />
     <Compile Include="EntityFramework\Utils\DateTimePropertyInfoHelper.cs" />
     <Compile Include="EntityFramework\Utils\EntityDateTimePropertiesInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
