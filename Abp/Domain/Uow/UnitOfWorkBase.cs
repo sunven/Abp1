@@ -36,10 +36,7 @@ namespace Abp.Domain.Uow
         public UnitOfWorkOptions Options { get; private set; }
 
         /// <inheritdoc/>
-        public IReadOnlyList<DataFilterConfiguration> Filters
-        {
-            get { return _filters.ToImmutableList(); }
-        }
+        public IReadOnlyList<DataFilterConfiguration> Filters => _filters.ToImmutableList();
         private readonly List<DataFilterConfiguration> _filters;
 
         /// <summary>
